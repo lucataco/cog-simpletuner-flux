@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "simpletuner"
+version = "0.1.0"
+description = "Stable Diffusion 2.x and XL tuner."
+authors = ["bghira"]
+license = "SUL"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+torch = "^2.4.0"
+torchvision = "^0.19.0"
+diffusers = {git = "https://github.com/huggingface/diffusers", rev = "lora-support-flux"}
+transformers = "^4.41.2"
+datasets = "^2.14.3"
+dadaptation = "^3.1"
+wandb = "^0.16.1"
+requests = "^2.31.0"
+pillow = "^10.2.0"
+opencv-python = "^4.8.0.74"
+accelerate = "^0.31.0"
+safetensors = "^0.4.2"
+compel = "^2.0.1"
+clip-interrogator = "^0.6.0"
+open-clip-torch = "^2.20.0"
+iterutils = "^0.1.6"
+scipy = "^1.11.1"
+boto3 = "^1.28.38"
+pandas = "^2.0.3"
+botocore = "^1.31.38"
+urllib3 = "<1.27"
+torchsde = "^0.2.5"
+torchmetrics = "^1.1.1"
+colorama = "^0.4.6"
+numpy = "1.26"
+peft = "^0.11.1"
+tensorboard = "^2.15.1"
+prodigyopt = "^1.0"
+regex = "^2023.12.25"
+huggingface-hub = "^0.23.3"
+optimum = "^1.21.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+priority = "supplemental"
+name = "pytorch-nightly"
+url = "https://download.pytorch.org/whl/nightly/cpu"
